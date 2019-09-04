@@ -24,6 +24,10 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
+  precacheUrls.push('/愿有人陪你颠沛流离/');
+
+  precacheUrls.push('/CentOS7-搭建-SSR-服务/');
+
   precacheUrls.push('/hello-world/');
 
 toolbox.precache(precacheUrls);
