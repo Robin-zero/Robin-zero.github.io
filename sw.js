@@ -24,6 +24,10 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
+  precacheUrls.push('/道德经/');
+
+  precacheUrls.push('/太上老君说常清静经/');
+
   precacheUrls.push('/愿有人陪你颠沛流离/');
 
   precacheUrls.push('/CentOS7-搭建-SSR-服务/');
