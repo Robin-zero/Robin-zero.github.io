@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html>
+<head><link rel=manifest href=/manifest.json><meta name="generator" content="Hexo 3.9.0"><link rel="manifest" href="/manifest.json">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>翻译中 GitHub 的使用 | Robin&#39;s Blog</title>
+  
+  <meta name="keywords" content="FE,Web,HTML5,JavaScript,CSS,VUE,Linux,CentOS,前端,后台,运维,全栈">
+  
+  
+  <meta name="description" content="Robin's personal blog">
+  
+
+  
+  <link rel="alternate" href="/atom.xml" title="Robin's Blog">
+  
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
+  
+
+  
+  <link rel="shortcut icon" type="image/x-icon" href="/images/RFE.ico">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/css/style.css">
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+  
+  
+  <div class="cover-wrapper">
+    <cover class='cover post half'>
+      
+        
+  <h1 class='title'>Robin's Blog</h1>
+
+
+  <div class="m_search">
+    <form name="searchform" class="form u-search-form">
+      <input type="text" class="input u-search-input" placeholder="" />
+      <i class="icon fas fa-search fa-fw"></i>
+    </form>
+  </div>
+
+<div class='menu navgation'>
+  <ul class='h-list'>
+    
+      
+        <li>
+          <a class="nav home" href="/"
+            
+            
+            id="home">
+            <i class='fas fa-book fa-fw'></i>&nbsp;博文
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/blog/archives/"
+            
+            
+            id="blogarchives">
+            <i class='fas fa-archive fa-fw'></i>&nbsp;归档
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/friends/"
+            
+              rel="nofollow"
+            
+            
+            id="friends">
+            <i class='fas fa-link fa-fw'></i>&nbsp;友链
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/about/"
+            
+              rel="nofollow"
+            
+            
+            id="about">
+            <i class='fas fa-info-circle fa-fw'></i>&nbsp;关于
+          </a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+      
+    </cover>
+    <header class="l_header pure">
+  <div id="loading-bar-wrapper">
+    <div id="loading-bar" class="pure"></div>
+  </div>
+
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href='/' >
+        
+          Robin's Blog
+        
+      </a>
+			<div class='menu navgation'>
+				<ul class='h-list'>
+          
+  					
+  						<li>
+								<a class="nav flat-box" href="/"
+                  
+                  
+                  id="home">
+									<i class='fas fa-clock fa-fw'></i>&nbsp;近期文章
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/blog/categories/dev/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="blogcategoriesdev">
+									<i class='fas fa-laptop-code fa-fw'></i>&nbsp;技术
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/blog/categories/life/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="blogcategorieslife">
+									<i class='fas fa-coffee fa-fw'></i>&nbsp;生活
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<i class="icon fas fa-search fa-fw"></i>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a class="fas fa-search fa-fw" href='javascript:void(0)'></a></li>
+				
+				<li class='s-menu'><a class="fas fa-bars fa-fw" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo flat-box"></a>
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a class="flat-btn fas fa-comments fa-fw" href='javascript:void(0)'></a></li>
+        
+          <li class='s-toc'><a class="flat-btn fas fa-list fa-fw" href='javascript:void(0)'></a></li>
+        
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu navgation">
+      <ul>
+        
+          
+            <li>
+							<a class="nav flat-box" href="/"
+                
+                
+                id="home">
+								<i class='fas fa-clock fa-fw'></i>&nbsp;近期文章
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/blog/archives/"
+                
+                  rel="nofollow"
+                
+                
+                id="blogarchives">
+								<i class='fas fa-archive fa-fw'></i>&nbsp;文章归档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/blog/categories/"
+                
+                  rel="nofollow"
+                
+                
+                id="blogcategories">
+								<i class='fas fa-folder-open fa-fw'></i>&nbsp;文章分类
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/blog/tags/"
+                
+                  rel="nofollow"
+                
+                
+                id="blogtags">
+								<i class='fas fa-hashtag fa-fw'></i>&nbsp;文章标签
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/friends/"
+                
+                  rel="nofollow"
+                
+                
+                id="friends">
+								<i class='fas fa-link fa-fw'></i>&nbsp;我的友链
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/about/"
+                
+                  rel="nofollow"
+                
+                
+                id="about">
+								<i class='fas fa-info-circle fa-fw'></i>&nbsp;关于小站
+							</a>
+            </li>
+          
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+<script>setLoadingBarProgress(40);</script>
+
+  </div>
+
+
+  <div class="l_body">
+    <div class='body-wrapper'>
+      <div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="/翻译中-GitHub-的使用/">
+        翻译中 GitHub 的使用
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://robin-zero.ml" rel="nofollow">
+      
+        <img src="https://avatars2.githubusercontent.com/u/22169252?s=460&v=4">
+      
+      <p>Robin</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2018-07-18</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/blog/categories/dev/工具/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>dev&nbsp;/&nbsp;工具</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  
+    <div class="new-meta-item browse busuanzi">
+      <a class='notlink'>
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <p>
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+          </span>
+        </p>
+      </a>
+    </div>
+  
+
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          <p><img src="/images/abstract/git.png" alt="翻译中 GitHub 的使用"></p>
+<p><strong>摘要：</strong>在做 <a href="https://www.freecodecamp.one" target="_blank" rel="noopener">freeCodeCamp 中文社区</a> 志愿者的时候，有幸参与在线课程的翻译工作，该博文是<a href="https://github.com/S1ngS1ng" target="_blank" rel="noopener">柳星</a>大佬整理的翻译注意事项，只作搬运以备不时之需。</p>
+<a id="more"></a>
+
+<hr>
+<h1 id="翻译格式与注意事项"><a href="#翻译格式与注意事项" class="headerlink" title="翻译格式与注意事项"></a>翻译格式与注意事项</h1><p>请前往<a href="./style-guide.md">翻译格式与建议</a></p>
+<h1 id="关于-git-和-github"><a href="#关于-git-和-github" class="headerlink" title="关于 git 和 github"></a>关于 git 和 github</h1><h2 id="常用词汇"><a href="#常用词汇" class="headerlink" title="常用词汇"></a>常用词汇</h2><ul>
+<li>repo：代码仓库</li>
+<li>PR：即 pull request，合并请求</li>
+<li>branch：分支</li>
+<li>commit：提交记录</li>
+<li>merge：指 PR 合并到代码仓库的操作</li>
+<li>conflicts：（合并）冲突</li>
+</ul>
+<h2 id="开始之前"><a href="#开始之前" class="headerlink" title="开始之前"></a>开始之前</h2><ul>
+<li><p>首先，fork 一下 <a href="https://github.com/FreeCodeCampChina/challenges.git" target="_blank" rel="noopener">challenges</a> repo。</p>
+</li>
+<li><p>把<strong>你的 fork</strong> 克隆到本地。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/your_name/challenges.git  <span class="comment"># 注意，your_name 是你的 github ID。</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>切换到 challenges 文件夹。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> challenges</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果你没有关联过上游，请先：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add upstream https://github.com/FreeCodeCampChina/challenges.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>根据你在翻译的项目名称或者你正在做的事情，新建分支。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 建议每次都基于 upstream 的 translate 分支新建你的分支</span></span><br><span class="line"><span class="comment"># 请参考后面的“常见问题”</span></span><br><span class="line">git fetch upstream</span><br><span class="line">git checkout -b your_branch_name upstream/translate  <span class="comment"># 其中 your_branch_name 是你的分支名</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在本地进行代码或文件修改。</p>
+</li>
+<li><p>添加要追踪的文件到暂存区。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .        <span class="comment"># 注：这个命令不是永远都会添加你的所有改动，请参考“常见问题”。</span></span><br><span class="line">git add my.json  <span class="comment"># 或者你也可以添加某一个文件</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>提交 commit 到本地仓库。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"My commit message"</span>  <span class="comment"># 注意，请根据实际情况填写 commit message。</span></span><br><span class="line">git commit <span class="comment"># 或者你也可以打开你喜欢的编辑器（需要配置），在里面编写 commit message。</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>把本地仓库推送到远程仓库。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin your_branch_name</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>打开 github 页面，创建 PR。</p>
+</li>
+</ul>
+<h2 id="同步远程更新至本地"><a href="#同步远程更新至本地" class="headerlink" title="同步远程更新至本地"></a>同步远程更新至本地</h2><ul>
+<li><p>关联上游 repo 至本地项目。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add upstream https://github.com/FreeCodeCampChina/challenges.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取上游更新，并应用到本地。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --rebase upstream translate</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
+<li><p><code>pull</code> 或 <code>rebase</code> 之后，如果有 conflicts，可以先使用 <code>git status</code> 查看存在 conflicts 的文件。</p>
+<p>修改成需要的版本后，使用 <code>git add .</code> 然后 <code>git rebase --continue</code>。</p>
+<p><strong>请注意，在这个过程中：不要 commit！不要 commit！不要 commit！</strong></p>
+</li>
+<li><p>解决冲突之后，需要更新至远程，否则只有你的本地有更新。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin your_branch_name</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果出现错误提示，请先使用 <code>git status</code> 命令检查本地是否有未解决完成的 conflicts。</p>
+</li>
+<li><p>任何时候出现错误，不必惊慌。</p>
+<p>先使用 <code>git status</code> 命令检查当前所在的分支、当前目录是否纯净（clean），以及本地是否有未解决完成的 conflicts。</p>
+</li>
+<li><p>如果上一步没问题，你可以用 <code>git push -f origin your_branch_name</code> 来更新远程。</p>
+</li>
+<li><p>如果你已经用当前的 branch 开了 PR，那么更新这个 branch 至远程的同时，你的 PR 也会自动更新。</p>
+</li>
+</ul>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><details><summary><b>为什么 "git add ." 命令有时会添加不上我的改动？</b></summary>
+
+<p>  注意，<code>git add .</code> 中的 <code>.</code> 表示“当前路径”。</p>
+<p>  因此，如果你通过 <code>cd</code> 命令切换到子目录，并在里面执行 <code>git add .</code>，那么外面的改动则不会添加。</p>
+<p>  然而，如果你在父级目录执行 <code>git add .</code>，子级目录里的文件改动是会添加的。</p>
+<p>  真正的“添加所有文件”的命令是 <code>git add --all</code>，可以简写为 <code>git add -A</code>。</p>
+<p>  对于这个翻译项目，我们很少会需要 <code>cd</code> 进子目录。因此，一般情况下使用 <code>git add .</code> 就足够了。</p>
+</details>
+
+<details><summary><b>如何解决冲突？</b></summary>
+
+<p>  对于任何多人协作项目，有 merge conflicts 是十分正常的。</p>
+<p>  如果你在命令行中看到了 <code>CONFLICTS</code> 这样的输出，那就表示有冲突。</p>
+<p>  这时，你需要先使用 <code>git status</code> 命令来查看冲突发生的文件。</p>
+<p>  一般来说，有冲突的文件会显示成这样：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">some code ....（这里的代码是没有冲突的）</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">code version 1</span><br><span class="line">code version 1</span><br><span class="line">=======</span><br><span class="line">code version 2</span><br><span class="line">code version 2</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; your_branch_name</span><br><span class="line">yet some other code ....（这里的代码也是没有冲突的）</span><br></pre></td></tr></table></figure>
+
+<p>  注意，里面的 <code>HEAD</code> 和 <code>your_branch_name</code> 位置可能互换，也可能会是其他内容，比如一个 commit hash。</p>
+<p>  其中，<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> 与 <code>=======</code> 之间为代码的一个版本，<code>=======</code> 与 <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> 之间为代码的另一个版本。</p>
+<p>  你需要来决定使用哪个版本的代码，修改的时候，把 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>、<code>=======</code> 和 <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> 这三行都删掉。</p>
+<p>  以及，删掉你不需要的那个版本，保留你需要的版本。</p>
+<p>  处理完所有的冲突文件后，（由于我们执行的是 <code>git pull --rebase</code>），那么我们需要 <code>git add .</code>，然后 <code>git rebase --continue</code>。</p>
+</details>
+
+<details><summary><b>如果某个文件我没有改动，在处理冲突的时候如何可以使用 upstream 上 translate 分支的版本？</b></summary>
+
+<p>  有时，可能会存在你没修改某个文件的内容，然而它却出现在了 conflicts 里（特别是如果你之前使用过 <code>pull</code>，而不是 <code>pull --rebase</code>）。</p>
+<p>  这时，我们输入：。</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git fetch upstream</span><br><span class="line">git checkout upstream/translate -- the/path/to/that_file</span><br></pre></td></tr></table></figure>
+
+<p>  这时，你本地的这个文件就变成和远程一样了。</p>
+<p>  处理之后，记得 <code>git add .</code>。</p>
+</details>
+
+<details><summary><b>如何查看我当前处于哪个分支？</b></summary>
+
+<p>  <code>git branch</code> 可以列出本地所有的分支名，前面打星号（*）的就是你当前所在的分支。</p>
+</details>
+
+<details><summary><b>如何切换分支？</b></summary>
+
+<p>  <code>git checkout some_branch_name</code> 就可以切换到对应的分支。</p>
+<p>  以及，<code>git checkout -</code> 可以切换到上一个切换过的分支。</p>
+<p>  在两个分支之间来回切换的时候，这个命令会很有用。</p>
+</details>
+
+<details><summary><b>新建分支的时候，与我当前所在的分支有关联么？</b></summary>
+
+<p>  有，新建分支的时候，当前所在分支的所有 <code>commit</code> 也会添加到新的分支里面。</p>
+<p>  以及，如果你本地有未 <code>commit</code> 的改动（哪怕已经 <code>add</code> 过），同样会在新建分支的时候带过去。</p>
+</details>
+
+<details><summary><b>既然切换 branch 时代码会跟着走，我正在别的分支上翻译，突然让我去更新之前开了 PR 的另一个分支，我该怎么办？</b></summary>
+
+<p>  你有两个选择，<code>commit</code> 或者 <code>stash</code>：</p>
+<ul>
+<li><p><code>commit</code> 很简单，在当前分支上 <code>git add .</code> 然后 <code>git commit -m &quot;xx&quot;</code>，这时候你就可以使用 <code>checkout</code> 命令切换到其他分支了。</p>
+</li>
+<li><p>在当前分支上 <code>git stash</code>，然后切换到其他分支。完成那边的更新后，切换回来，然后 <code>git stash pop</code>，你之前的代码改动就都回来了。</p>
+<p>需要注意的是，使用 <code>git stash pop</code> 会有丢代码的潜在风险，推荐使用 <code>git stash apply stash@{x}</code>，其中 <code>x</code> 为一个数字。</p>
+<p>如果你不确定你的做法是否正确，或者不了解这个命令，请在使用之前查清资料，或者在群里提问。</p>
+</li>
+<li><p><em>切换分支前，为防止把本地弄乱，前先使用 <code>git status</code> 来检查本地是否 “clean”。*</em></p>
+</li>
+</ul>
+</details>
+
+<details><summary><b>我可不可以根据远程的分支（比如 upstream 的 translate 分支）来创建本地分支？</b></summary>
+
+<p>  可以：<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git fetch upstream</span><br><span class="line">git checkout -b my_branch_name upstream/translate</span><br></pre></td></tr></table></figure></p>
+</details>
+
+<details><summary><b>每次都从远程创建分支太麻烦，我可不可以直接从本地创建分支？</b></summary>
+
+<p>  可以。建议使用本地的 translate 分支保持与 upstream 中的 translate 分支保持更新。这样做的好处是：</p>
+<ul>
+<li><p>每次新建分支的时候，切换到本地的 translate 分支，然后 <code>git checkout -b my_new_branch</code> 就好了。</p>
+</li>
+<li><p>如果 upstream 的 translate branch 有更新，你只需要在切换到 translate 分支之后，<code>git pull --rebase upstream translate</code> 即可完成对本地 translate 分支的更新。再创建新的分支，就是基于 upstream 里最新的代码了，这样可以减少 conflicts 出现的可能。</p>
+</li>
+</ul>
+</details>
+
+<details><summary><b>我在一个分支上 commit 了我的代码，这时候 upstream 更新了，我该怎么做？</b></summary>
+
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --rebase upstream translate</span><br></pre></td></tr></table></figure>
+
+</details>
+
+<details><summary><b>我的本地 translate 分支已经有我的 commit 了，那我该如何用这个分支作为与 upstream translate 同步的分支呢？</b></summary>
+
+<p>  <strong>如果你目前在 translate 提交的内容不再需要了（比如，已经 merge），那你可以先切换到 translate，然后：</strong></p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git fetch upstream</span><br><span class="line">git reset --hard upstream/translate</span><br></pre></td></tr></table></figure>
+
+<p>  虽然 <code>git reset</code> 命令不危险，但在执行这个操作之前，建议你先在群里问一下。</p>
+</details>
+
+<details><summary><b>命令好长，我不想记。</b></summary>
+
+<p>  <code>alias</code> 了解一下。在命令行里执行：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global alias.gx <span class="string">'pull --rebase upstream translate'</span></span><br></pre></td></tr></table></figure>
+
+<p>  下次，执行 <code>git gx</code>（记忆：git 更新），就会执行你定义好的命令了。</p>
+</details>
+
+<details><summary><b>我已经开了 PR，但代码历史记录很乱，而且文件改动包含了不是我改的东西，如何修复？（多见于曾经在这个分支上用过 pull 命令，现在使用 pull --rebase 的情况，见下文分析）</b></summary>
+
+<p>  如果对 git 不是很熟悉（特别是 <code>git brease -i</code> 以及 <code>rebase</code> 命令的原理），重建一个新的分支，然后把当前这个分支里属于你的 file change 给 apply 过去，再用新的分支开 PR 是最省事的做法。</p>
+<p>  假设你目前处于 <code>translate-old</code> 分支上，你改动了文件 <code>02-javascript-algorithms/abc.json</code> 以及 <code>02-javascript-algorithms/abc.md</code>，且你已经用当前的 <code>translate-old</code> 分支开了 PR：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取 upstream 的 HEAD 指针</span></span><br><span class="line"><span class="comment"># （有兴趣可以去了解下 HEAD 指针是什么，这对理解 git 的原理很有帮助。但不了解也不影响后续操作）</span></span><br><span class="line">git fetch upstream</span><br><span class="line"></span><br><span class="line"><span class="comment"># 基于 upstream 的 translate branch 新建一个 branch</span></span><br><span class="line"><span class="comment"># （这一步是保证你将要提交 PR 所用的分支是基于最新的 upstream/translate 分支的代码）</span></span><br><span class="line">git checkout -b translate-new upstream/translate</span><br><span class="line"></span><br><span class="line"><span class="comment"># 由于你这个 PR 是基于你的 translate-old 分支开的，</span></span><br><span class="line"><span class="comment"># 所以现在要把这个分支上属于你的文件改动应用到新的 branch 上</span></span><br><span class="line">git checkout translate-old -- 02-javascript-algorithms/abc.json</span><br><span class="line">git checkout translate-old -- 02-javascript-algorithms/abc.md</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这个应该只输出你改过的两个文件（在这个例子中是两个）才对</span></span><br><span class="line">git status</span><br><span class="line"></span><br><span class="line"><span class="comment"># add、commit、push</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"Finish translation of xxx"</span></span><br><span class="line">git push origin transalte-new</span><br><span class="line"></span><br><span class="line"><span class="comment"># 然后用这个新的 translate-new 分支去开 PR 就好了</span></span><br></pre></td></tr></table></figure>
+
+</details>
+
+
+<h2 id="一些原则"><a href="#一些原则" class="headerlink" title="一些原则"></a>一些原则</h2><ul>
+<li><p>建议使用 <a href="https://guides.github.com/introduction/flow/" target="_blank" rel="noopener">git workflow</a> 来进行分支的管理。</p>
+<p>这样我们可以提交 PR 之后继续在新的 branch 上进行后续的翻译，若需要更新当前的 PR，我们随时可以切换回来。</p>
+</li>
+<li><p>不建议同时开两个相同类型（比如翻译）的 PR，请等待之前的 merge 之后再开新的 PR。</p>
+</li>
+<li><p>如果你的 PR 已经被 review 过，请不要再添加新的翻译内容，根据 comment 修改好当前的 PR 即可。</p>
+<p>后续的翻译你可以等当前翻译 merge 后再开始做，或者在另一个本地的 branch 进行后续的翻译。</p>
+</li>
+<li><p>你的 PR 中不应包含你未改动过的文件，请在提交的时候仔细检查。如果包含了，请参考上面的解决方案。大部分情况下，坚持使用 <code>git pull --rebase</code>，不混用 <code>git pull</code> 可以在很大程度上避免这个问题的产生。</p>
+<details><summary><b>注：包含与否一般不会影响代码库，或导致功能缺失。但这会给 review、后续的版本控制和管理造成很大的麻烦：</b></summary>
+
+<ol>
+<li>Review 的时候，需要仔细比对那些本不是你改的文件，确保你没有（在 resolve conflicts 或 commit 的时候）更改任何内容。</li>
+<li>如果你在 PR 中引入了已经 merge 的 commits，那么就会在对应的 PR 中添加对你的 PR 的 reference。事实上，由于你本无意改动那些文件，这就只会对维护者和后续的开发者造成误导。</li>
+<li>维护者本可以直接通过文件的最新 commit 找到对应的 PR，但由于其他人也包含了这个文件，则需要一步一步排查，看究竟是哪一步出了问题。</li>
+</ol>
+</details>
+
+<details><summary><b>如果你想知道产生这个问题的原因，请参考以下的图形化解释：</b></summary>
+
+<h2 id="关于-PR-中，引入他人更改文件的情况分析："><a href="#关于-PR-中，引入他人更改文件的情况分析：" class="headerlink" title="关于 PR 中，引入他人更改文件的情况分析："></a>关于 PR 中，引入他人更改文件的情况分析：</h2><p>  假设现在的 <code>upstream/translate</code> 是 <code>A -&gt; B</code> 这两个 commits，其中 <code>B</code> 较新。你基于这个创建了你的 <code>my-translate</code> 分支，那么你也会得到 <code>A -&gt; B</code>。</p>
+<p>  之后，你开始进行翻译，并 <code>commit</code> 了代码。现在你的 <code>my-translate</code> 是 <code>A -&gt; B -&gt; X</code>，其中 <code>X</code> 为你的 commit。</p>
+<p>  然后你发现远程更新了，现在远程是 <code>A -&gt; B -&gt; C -&gt; D</code>。这次你使用了 <code>git pull</code> 命令。那么在 <code>my-translate</code> 分支，你就得到：<code>A -&gt; B -&gt; X -&gt; M</code>。其中，<code>M</code> 就是传说中的 merge commit，它包含了上游的 <code>C</code> 和 <code>D</code>。</p>
+<p>  （但从常理判断，这时候如果你得到 <code>A -&gt; B -&gt; C -&gt; D -&gt; X</code> 这样的历史线就更好了。这正是 <code>git pull --rebase</code> 会帮你完成的事情，以及这也是我们推荐使用这个命令的原因。）</p>
+<p>  然后你继续翻译，并 <code>commit</code> 了代码，现在你的 <code>my-translate</code> 分支就是 <code>A -&gt; B -&gt; X -&gt; M -&gt; Y</code>，其中 <code>Y</code> 是你的最新 commit。</p>
+<p>  这时候你执行了 <code>git pull --rebase</code>，那么问题来了。基于 <code>rebase</code> 命令的比较原理（或者说算法），它会首先寻找一个你的 <code>my-translate</code> 分支与 <code>upstream/translate</code> 分支共同的”祖先 commit“（ancestor commit）。”共同的祖先 commit“（common ancestor commit）是指这两个分支<strong>开始出现分歧（diverted）之前的那个 commit</strong>。在这个例子中，它就会找到 commit <code>B</code>，因为在 <code>B</code> 之后，<code>my-translate</code> 分支是 commit <code>X</code>，而 <code>upstream/translate</code> 是 commit <code>C</code>。</p>
+<p>  <code>rebase</code> 的执行逻辑可以简化为 <code>git reset --hard</code> + <code>git cherry-pick</code>（好奇的朋友可以去了解下这两个命令），那么 <code>cherry-pick X</code> 的时候不会出问题（基于 <code>B</code>，添加你的翻译，显然不会有报错），但 <code>cherry-pick C</code> 的时候就很可能会出现 conflicts：</p>
+<p>  假设 <code>C</code> 中，其他人更新了 <code>README.md</code>（当然，在你的 commit <code>X</code> 和 <code>Y</code> 中，你都没有修改这个 <code>README.md</code>），常理上来说，这件事<strong>应该</strong>发生在 <code>X</code> 之前。但由于在你的分支 <code>my-translate</code> 中，<code>X</code> 是先于 <code>M</code>（包含 <code>C</code> 和 <code>D</code>）发生的，那么这里就造成了 Git 的困扰：它觉得，根据 <code>upstream/translate</code> 分支，说好了 <code>B</code> 之后就改 <code>README.md</code> 的；然而在你的分支里，却告诉我 <code>B</code> 之后 <code>README.md</code> 不需要改，那我该怎么办？——那我就只能告诉你我遇到了 conflicts，请你手动解决下吧。</p>
+<p>  这时，如果你<strong>错误地</strong>使用了 <code>git commit</code> 命令，那么 Git 就会觉得，这个 <code>README.md</code> 你也改动过了，事实上你并没有，以及你也没打算改，这是<strong>我认为</strong>导致引入他人更改文件的一种原因。</p>
+<p>  后续哪怕再 <code>git pull --rebase</code>，Git 也会去找 commit <code>B</code> 作为 common ancestor。这依然会导致 conflicts，因为在 <code>my-translate</code> 里，从一开始，<code>B</code> 之后是 <code>X</code> 这件事就是错的。</p>
+<p>  <strong>我认为</strong>的另一种可能，在这个例子中，就是如果后续还有其他人改了 <code>README.md</code> 那么本地执行 <code>git pull</code> 的时候也会产生 conflicts，这时出现的根源是 <code>git merge</code>，因为目前 <code>my-translate</code> 的 <code>HEAD</code> 显然不是那个 <code>README.md</code> 更改的 ancestor，因此 Git 没法 fast forward 那个新的 <code>README.md</code> 改动，感兴趣的朋友可以去了解下什么是 <code>fast-forward</code>。此时需要手动处理 conflicts，处理之后 <code>git commit</code>，那么 Git 就会认为你也参与到了这个 commit 中。</p>
+<h2 id="那么，git-pull-rebase-对这种情况会有什么帮助？"><a href="#那么，git-pull-rebase-对这种情况会有什么帮助？" class="headerlink" title="那么，git pull --rebase 对这种情况会有什么帮助？"></a>那么，<code>git pull --rebase</code> 对这种情况会有什么帮助？</h2><p>  还是上面的例子，你的 <code>my-translate</code> 是 <code>A -&gt; B -&gt; X</code>，远程以及是 <code>A -&gt; B -&gt; C -&gt; D</code> 了，其中 <code>C</code> 里面更改了 <code>README.md</code>。</p>
+<p>  如果你采用 <code>git pull --rebase</code>，那么你的本地就会是 <code>A -&gt; B -&gt; C -&gt; D -&gt; X</code>。后续你又 <code>commit</code> 了新的代码，比如现在你的本地是 <code>A -&gt; B -&gt; C -&gt; D -&gt; X -&gt; Y -&gt; Z</code>。此时，远程那边也加了几个 commit，变成了 <code>A -&gt; B -&gt; C -&gt; D -&gt; E -&gt; F</code>。</p>
+<p>  如果你继续 <code>git pull --rebase</code>，那么 Git 此时寻找到的 common ancestor commit 是 <code>D</code>，而不再是上面使用 <code>git pull</code> 的 <code>B</code> 了。除非 <code>E</code> 和 <code>F</code> 里也改了你正在改的文件，否则就不太可能产生冲突。</p>
+<p>  结果，你就会得到 <code>A -&gt; B -&gt; C -&gt; D -&gt; E -&gt; F -&gt; X -&gt; Y -&gt; Z</code>，这也正是我们期望的结果。</p>
+</details>
+
+<p>所以，麻烦大家花一点时间处理下。感谢 :pray:</p>
+</li>
+</ul>
+
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <hr>
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-09-23T09:52:56+08:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>最后更新于 2019年9月23日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/Git/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>Git</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://robin-zero.ml/翻译中-GitHub-的使用/&title=翻译中 GitHub 的使用 | Robin's Blog&pics=https://avatars2.githubusercontent.com/u/22169252?s=460&v=4&summary=
+摘要：在做 freeCodeCamp 中文社区 志愿者的时候，有幸参与在线课程的翻译工作，该博文是柳星大佬整理的翻译注意事项，只作搬运以备不时之需。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://robin-zero.ml/翻译中-GitHub-的使用/&title=翻译中 GitHub 的使用 | Robin's Blog&pics=https://avatars2.githubusercontent.com/u/22169252?s=460&v=4&summary=
+摘要：在做 freeCodeCamp 中文社区 志愿者的时候，有幸参与在线课程的翻译工作，该博文是柳星大佬整理的翻译注意事项，只作搬运以备不时之需。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://robin-zero.ml/翻译中-GitHub-的使用/&title=翻译中 GitHub 的使用 | Robin's Blog&pics=https://avatars2.githubusercontent.com/u/22169252?s=460&v=4&summary=
+摘要：在做 freeCodeCamp 中文社区 志愿者的时候，有幸参与在线课程的翻译工作，该博文是柳星大佬整理的翻译注意事项，只作搬运以备不时之需。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+            <div class="prev-next">
+                
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                            <h4>
+                                <a href="/快应用踩坑记录/" rel="prev" title="快应用踩坑记录">
+                                  
+                                      快应用踩坑记录
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/blog/tags/快应用/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>快应用</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/gitee-新项目引导/" rel="prev" title="gitee 新项目引导">
+                                    
+                                        gitee 新项目引导
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/blog/tags/Git/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>Git</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments">
+    <section class="article typo">
+      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: '翻译中 GitHub 的使用',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+    
+    
+      
+        
+          
+          
+            <section class='widget author'>
+  <div class='content pure'>
+    
+      <div class='avatar'>
+        <img class='avatar' src='https://avatars2.githubusercontent.com/u/22169252?s=460&v=4'/>
+      </div>
+    
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="mailto:robin_zero@126.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://github.com/Robin-zero"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://blog.csdn.net/Robin_star_"
+              class="social fab fa-cuttlefish flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://music.163.com/#/user/home?id=1969354065"
+              class="social fas fa-music flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget toc-wrapper'>
+    
+<header class='pure'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
+  
+    <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class='content pure'>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#翻译格式与注意事项"><span class="toc-text">翻译格式与注意事项</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#关于-git-和-github"><span class="toc-text">关于 git 和 github</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#常用词汇"><span class="toc-text">常用词汇</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开始之前"><span class="toc-text">开始之前</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#同步远程更新至本地"><span class="toc-text">同步远程更新至本地</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意"><span class="toc-text">注意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见问题"><span class="toc-text">常见问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一些原则"><span class="toc-text">一些原则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于-PR-中，引入他人更改文件的情况分析："><span class="toc-text">关于 PR 中，引入他人更改文件的情况分析：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#那么，git-pull-rebase-对这种情况会有什么帮助？"><span class="toc-text">那么，git pull --rebase 对这种情况会有什么帮助？</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            <section class='widget grid'>
+  
+<header class='pure'>
+  <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;站内导航</div>
+  
+</header>
+
+  <div class='content pure'>
+    <ul class="grid navgation">
+      
+        <li><a class="flat-box" title="/" href="/"
+          
+          
+          id="home">
+          
+            <i class="fas fa-clock fa-fw" aria-hidden="true"></i>
+          
+          近期文章
+        </a></li>
+      
+        <li><a class="flat-box" title="/blog/archives/" href="/blog/archives/"
+          
+            rel="nofollow"
+          
+          
+          id="blogarchives">
+          
+            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
+          
+          文章归档
+        </a></li>
+      
+        <li><a class="flat-box" title="/blog/categories/" href="/blog/categories/"
+          
+            rel="nofollow"
+          
+          
+          id="blogcategories">
+          
+            <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+          
+          文章分类
+        </a></li>
+      
+        <li><a class="flat-box" title="/blog/tags/" href="/blog/tags/"
+          
+            rel="nofollow"
+          
+          
+          id="blogtags">
+          
+            <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>
+          
+          文章标签
+        </a></li>
+      
+        <li><a class="flat-box" title="/friends/" href="/friends/"
+          
+            rel="nofollow"
+          
+          
+          id="friends">
+          
+            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
+          
+          我的友链
+        </a></li>
+      
+        <li><a class="flat-box" title="/about/" href="/about/"
+          
+            rel="nofollow"
+          
+          
+          id="about">
+          
+            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
+          
+          关于小站
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget category'>
+    
+<header class='pure'>
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章分类</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/blog/categories/"
+    title="blog/categories/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="/blog/categories/dev/" href="/blog/categories/dev/"><div class='name'>dev</div><div class='badge'>(10)</div></a></li>
+        
+          <li><a class="flat-box child" title="/blog/categories/dev/其他/" href="/blog/categories/dev/其他/"><div class='name'>其他</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/blog/categories/dev/前端/" href="/blog/categories/dev/前端/"><div class='name'>前端</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box child" title="/blog/categories/dev/工具/" href="/blog/categories/dev/工具/"><div class='name'>工具</div><div class='badge'>(5)</div></a></li>
+        
+          <li><a class="flat-box child" title="/blog/categories/dev/运维/" href="/blog/categories/dev/运维/"><div class='name'>运维</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/blog/categories/life/" href="/blog/categories/life/"><div class='name'>life</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box child" title="/blog/categories/life/国学/" href="/blog/categories/life/国学/"><div class='name'>国学</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box child" title="/blog/categories/life/摘录/" href="/blog/categories/life/摘录/"><div class='name'>摘录</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget tagcloud'>
+    
+<header class='pure'>
+  <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/blog/tags/"
+    title="blog/tags/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <a href="/blog/tags/CentOS/" style="font-size: 14px; color: #999">CentOS</a> <a href="/blog/tags/CentOS7/" style="font-size: 14px; color: #999">CentOS7</a> <a href="/blog/tags/Git/" style="font-size: 24px; color: #555">Git</a> <a href="/blog/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/blog/tags/JavaScript/" style="font-size: 14px; color: #999">JavaScript</a> <a href="/blog/tags/JetBrains/" style="font-size: 14px; color: #999">JetBrains</a> <a href="/blog/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/blog/tags/Markdown/" style="font-size: 14px; color: #999">Markdown</a> <a href="/blog/tags/SSR/" style="font-size: 14px; color: #999">SSR</a> <a href="/blog/tags/VUE/" style="font-size: 14px; color: #999">VUE</a> <a href="/blog/tags/国学/" style="font-size: 19px; color: #777">国学</a> <a href="/blog/tags/快应用/" style="font-size: 14px; color: #999">快应用</a> <a href="/blog/tags/文学摘录/" style="font-size: 14px; color: #999">文学摘录</a>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget related_posts'>
+    
+<header class='pure'>
+  <div><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;相关文章</div>
+  
+</header>
+
+    <div class="content pure">
+      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\gitee-新项目引导\" title="gitee 新项目引导" rel="bookmark">gitee 新项目引导</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\GitLab-新项目引导\" title="GitLab 新项目引导" rel="bookmark">GitLab 新项目引导</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\webstorm2017-3最新激活教程\" title="webstorm2017.3最新激活教程" rel="bookmark">webstorm2017.3最新激活教程</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\Markdown-语法手册\" title="Markdown 语法手册" rel="bookmark">Markdown 语法手册</a></h3></div></li></ul>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            
+
+
+  <section class='widget music'>
+    
+<header class='pure'>
+  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;最近在听</div>
+  
+    <a class="rightBtn"
+    
+      rel="external nofollow noopener noreferrer"
+    
+    
+      target="_blank"
+    
+    href="https://music.163.com/#/user/home?id=1969354065"
+    title="https://music.163.com/#/user/home?id=1969354065">
+    <i class="far fa-heart fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+  <div class="aplayer"
+    data-theme="#1BCDFC"
+    
+    
+    data-mode="circulation"
+    data-server="netease"
+    data-type="playlist"
+    data-id="2153080805"
+    data-volume="0.7">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
+
+    </div>
+  </section>
+
+
+          
+        
+      
+    
+
+  
+</aside>
+
+<footer id="footer" class="clearfix">
+  
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="/atom.xml"
+            class="social fas fa-rss flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="mailto:robin_zero@126.com"
+            class="social fas fa-envelope flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://github.com/Robin-zero"
+            class="social fab fa-github flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://blog.csdn.net/Robin_star_"
+            class="social fab fa-cuttlefish flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://music.163.com/#/user/home?id=1969354065"
+            class="social fas fa-music flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+    </div>
+  
+  <br>
+  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+  <div>
+    本站使用
+    <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a>
+    作为主题
+    
+      ，
+      总访问量为
+      <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+      次
+    
+    。
+  </div>
+</footer>
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
+
+
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        if ('.cover') {
+          $('.cover').backstretch(
+          ["https://img.vim-cn.com/6d/a0c9e6f9efad8b731cb7376504bd10d79d2053.jpg"],
+          {
+            duration: "6000",
+            fade: "2500"
+          });
+        } else {
+          $.backstretch(
+          ["https://img.vim-cn.com/6d/a0c9e6f9efad8b731cb7376504bd10d79d2053.jpg"],
+          {
+            duration: "6000",
+            fade: "2500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+    
+      <script src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0/js/volantis.min.js"></script>
+    
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var notify = 'true' == true;
+  var verify = 'true' == true;
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    notify: notify,
+    verify: verify,
+    guest_info: guest_info,
+    
+    appId: "6t0mNPQCYFQ4qGIhTh7oFGQN-gzGzoHsz",
+    appKey: "lNMaHVBLILVloTNSfYgSzayn",
+    placeholder: "快来评论吧~",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'zh-cn',
+    highlight:'true'
+  })
+  </script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/js/app.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/js/search.js"></script>
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "复制成功";
+  let COPY_FAILURE = "复制失败";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>复制</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+
+  <!---------------------------- 自定义开始 ---------------------------->
+  <!-- 搞笑标题 -->
+  <script type="text/javascript" src="\js\funny_title.js"></script>
+
+  <!--动态线条背景-->
+  <!--<script type="text/javascript" color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>-->
+  <!-- 动态彩带背景 -->
+  <!-- 样式一（鼠标点击更换样式） -->
+  <!--<script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script>-->
+  <!-- 样式二（飘动的彩带） -->
+  <!--<script src="https://g.joyinshare.com/hc/piao.js" type="text/javascript"></script>-->
+
+  <!-- 点击动效：烟花炸裂 -->
+  <!--<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+  <script type="text/javascript" src="/js/click_show_fire.js"></script>-->
+  <!-- 点击动效：弹出小心心 -->
+  <script type="text/javascript" src="/js/click_show_heart.js"></script>
+  <!-- 点击动效：弹出文字 -->
+  <!--<script type="text/javascript" src="/js/click_show_text.js"></script>-->
+  <!---------------------------- 自定义结束 ---------------------------->
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1571298264953')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":20,"vOffset":20},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

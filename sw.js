@@ -24,15 +24,15 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
+  precacheUrls.push('/webstorm2017-3最新激活教程/');
+
   precacheUrls.push('/道德经/');
 
   precacheUrls.push('/太上老君说常清静经/');
 
-  precacheUrls.push('/愿有人陪你颠沛流离/');
+  precacheUrls.push('/vue-cli2-与-vue-cli3-共存/');
 
   precacheUrls.push('/CentOS7-搭建-SSR-服务/');
-
-  precacheUrls.push('/hello-world/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
